@@ -2,13 +2,9 @@
 
 Find the lowest eigenvalue of the following matrix:
 
-$$
-\left(\begin{array}{cc} 
-1 & 0 & 0 & 0\\
-0 & 0 & -1 & 0\\
-0 & -1 & 0 & 0\\
-0 & 0 & 0 & 1
-\end{array}\right)
-$$ 
+<br>
+<img src="images/matrix.png" />
+<br>
+<br>
 
-using VQE-like circuits, created by yourself from scratch.
+Use VQE-like circuits, created by yourself from scratch.
