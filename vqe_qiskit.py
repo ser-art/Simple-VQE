@@ -58,7 +58,7 @@ def vqe_circuit(parameters, measure):
     return circuit
 
 
-def quantum_module(parameters, measure):
+def expectation(parameters, measure):
     circuit = None
     if measure == 'II':
         return 1
@@ -103,7 +103,7 @@ pauli_dict = pauli_operator_to_dict(H)
 def energy(parameters):
     energy = 0
     for pauli_name in pauli_dict.keys():
-        energy += pauli_dict[pauli_name] * quantum_module(parameters, pauli_name)
+        energy += pauli_dict[pauli_name] * expectation(parameters, pauli_name)
     return energy
 
 params = list(np.pi * (np.random.random(size=2) - 0.5))
