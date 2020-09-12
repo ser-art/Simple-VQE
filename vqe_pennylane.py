@@ -53,8 +53,8 @@ def E(params):
 
 # Minimizing cost function (energy)
 params = list(np.pi * (np.random.random(size=2) - 0.5))
-tol = 1e-3
-opt_vqe = minimize(E, params, method="Powell", tol=tol)
+tol = 1e-4
+opt_vqe = minimize(E, params, method='Powell', tol=tol)
 
-print(f'True minimum energy (eigenvalue) of H: {np.linalg.eigvals(H).min()}')
+print(f'Reference minimum energy (eigenvalue) of H: {np.linalg.eigvals(H).min()}')
 print(f'Minimum energy (eigenvalue) of H: {np.round(opt_vqe.fun, 5)}')
