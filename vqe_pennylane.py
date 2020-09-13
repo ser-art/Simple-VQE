@@ -58,3 +58,4 @@ opt_vqe = minimize(E, params, method='Powell', tol=tol)
 
 print(f'Reference minimum energy (eigenvalue) of H: {np.linalg.eigvals(H).min()}')
 print(f'Minimum energy (eigenvalue) of H: {np.round(opt_vqe.fun, 5)}')
+print(f'Optimized params phi1: {np.round(opt_vqe.x[0], 5)}, phi2 {np.round(opt_vqe.x[1], 5)}')

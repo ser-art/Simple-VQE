@@ -115,4 +115,4 @@ reference_energy = min(np.real(exact_result.eigenvalues))
 
 print(f'Reference minimum energy (eigenvalue) of H: {reference_energy}')
 print(f'Minimum energy (eigenvalue) of H: {np.round(opt_vqe.fun, 5)}')
-print(f'Optimized params phi1: {opt_vqe.x[0]}, phi2 {opt_vqe.x[1]}')
+print(f'Optimized params phi1: {np.round(opt_vqe.x[0], 5)}, phi2 {np.round(opt_vqe.x[1], 5)}')
